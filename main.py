@@ -3,15 +3,12 @@ def main():
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     chars_dict = get_chars_dict(text)  
-    report(book_path,num_words,chars_dict)
-
-    
+    report(book_path,num_words,chars_dict)   
 
 def report(book_path,num_words,chars_dict):
     print(f"--- Begin report of {book_path} ---")
     print(f"{num_words} words found in the document")
     print(" ")
-
     mydict = {}
     mylist = []
     for name in chars_dict:
@@ -25,7 +22,6 @@ def report(book_path,num_words,chars_dict):
     Lnumber = [d.get("times") for d in mylist]   
     for i in range (0, len(Lname)):
         print(f"The {Lname[i]} characte was found {Lnumber[i]} times")
-
     print(" ")
     print("--- End report ---")
 
